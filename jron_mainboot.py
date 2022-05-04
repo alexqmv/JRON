@@ -12,6 +12,18 @@ KV = '''
     ScrollView:
 
         MDList:
+        
+        
+        
+        
+        
+# Added ListItems in Menu Bar Screen
+
+
+
+
+
+
 
             OneLineListItem:
                 text: "Wi-Fi"
@@ -89,6 +101,11 @@ KV = '''
                 on_press:
                     root.nav_drawer.set_state("close")
                     root.screen_manager.current = "scr 14"
+                    
+                    
+#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>#
+                                                       # SCREEN
+#<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<#
             
 
 MDScreen:
@@ -109,9 +126,70 @@ MDScreen:
             MDScreen:
                 name: "scr 1"
 
+
+                 
                 MDLabel:
-                    text: "Screen 1"
-                    halign: "center"
+                    text: "Security Type:                                                 Status:"
+                    font_name: 'mon2.ttf'
+                    pos_hint: {"center_x": .937, "center_y": .75}
+                MDLabel:
+                    text: "Name"
+                    font_name: 'mon1.ttf'
+                    pos_hint: {"center_x": .75, "center_y": .75}
+                MDLabel:
+                    text: "Visible Networks:"
+                    font_name: 'mon2.ttf'
+                    pos_hint: {"center_x": .935, "center_y": .85}
+                MDIconButton:
+                    icon: "wifi"
+                    pos_hint: {"center_x": .8, "center_y": .5}
+                MDIconButton:
+                    icon: "wifi"
+                    pos_hint: {"center_x": .8, "center_y": .6}
+                MDLabel:
+                    text: "iPhone                                                      WWP4                                                                 Online"
+                    font_name: 'mon1.ttf'
+                    pos_hint: {"center_x": .5, "center_y": .59}
+                    size_hint: 0.5,.1
+                    canvas.before:
+                        Color:
+                            rgb: rgba(0, 42, 42, 1)
+                        RoundedRectangle:
+                            size: self.size
+                            pos: self.pos
+                            radius: [6]
+                MDLabel:
+                    text: "TP-Link240Vireless                            SEC40                                                                 Online"
+                    font_name: 'mon1.ttf'
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: 0.5,.1
+                    canvas.before:
+                        Color:
+                            rgb: rgba(0, 42, 42, 1)
+                        RoundedRectangle:
+                            size: self.size
+                            pos: self.pos
+                            radius: [6]
+                    MDIconButton:
+                        icon: 'wifi'
+                        pos_hint: {"center_x": .5, "center_y": .59}
+                Button:
+                    text:'Connect'
+                    size_hint: .2,.1
+                    background_color: 1,1,1,0
+                    pos_hint: {"center_x": .5, "center_y": .28}
+                    canvas.before:
+                        Color:
+                            rgb: rgba(149,118,256,256)
+                        RoundedRectangle:
+                            size: self.size
+                            pos: self.pos
+                            radius: [6]
+
+
+
+
+#######################################111111111111111111111111##################################
             MDScreen:
                 name: "scr 3"
 
